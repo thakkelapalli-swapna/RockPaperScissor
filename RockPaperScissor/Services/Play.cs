@@ -24,24 +24,26 @@ namespace RockPaperScissor.Services
             Console.WriteLine(Constants.EnterName);
             string name = Console.ReadLine();
             Console.WriteLine(Constants.GreetingMsg, name);
-            int rounds = _action.GetDesiredRounds();
-            PlayRounds(ref playerPoints, ref computerPoints, rounds);
-            Console.WriteLine(Constants.Result, playerPoints, computerPoints);
-            if (playerPoints == computerPoints)
-            {
-                Console.WriteLine(Constants.TieGame);
-            }
-            else
-            {
-                string message = playerPoints > computerPoints ? string.Format(Constants.UserWinsTheGame, name) : string.Format(Constants.ComputerWinsTheGame, name);
-                Console.WriteLine(message);
-            }
+            Console.ReadLine();
+            //int rounds = _action.GetDesiredRounds();
+            PlayRounds();
+            //Console.WriteLine(Constants.Result, playerPoints, computerPoints);
+            //if (playerPoints == computerPoints)
+            //{
+            //    Console.WriteLine(Constants.TieGame);
+            //}
+            //else
+            //{
+            //    string message = playerPoints > computerPoints ? string.Format(Constants.UserWinsTheGame, name) : string.Format(Constants.ComputerWinsTheGame, name);
+            //    Console.WriteLine(message);
+            //}
         }
-        private void PlayRounds(ref int playerPoints, ref int computerPoints, int rounds)
+        private void PlayRounds()
         {
-            for (var round = 1; round <= rounds; round++)
+            string repeat = string.Empty;
+            do
             {
-                Console.WriteLine(Constants.BeginMsg, round);
+                //Console.WriteLine(Constants.BeginMsg, rounds);
                 Console.WriteLine(Constants.UserInputMsg);
 
                 var playerAction = _action.GetPlayerAction();
@@ -54,23 +56,24 @@ namespace RockPaperScissor.Services
                 {
                     case Result.PlayerWon:
                         Console.WriteLine(Constants.UserWinsRound);
-                        playerPoints++;
+                        //playerPoints++;
                         break;
                     case Result.ComputerWon:
                         Console.WriteLine(Constants.ComputerWinsRound);
-                        computerPoints++;
+                        //computerPoints++;
                         break;
                     case Result.Tie:
                         Console.WriteLine(Constants.TieRound);
-                        playerPoints++;
-                        computerPoints++;
+                        //playerPoints++;
+                        //computerPoints++;
                         break;
                     case Result.Exception:
                         Console.WriteLine(Constants.ExceptionMsg);
                         break;
                 }
-                Console.WriteLine();
-            }
+                Console.WriteLine("do you want to play again? Y / N");
+                repeat = Console.ReadLine().ToUpper();
+            } while (repeat == "Y");
         }
     }
 }

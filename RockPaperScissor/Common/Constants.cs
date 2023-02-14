@@ -4,13 +4,13 @@
     {
         public const string WelcomeMessage = "Welcome to the game Rock, Paper, Scissors";
         public const string EnterName = "Please enter your name";
-        public const string GreetingMsg = "Hello {0}, How many rounds would you like to play?";
+        public const string GreetingMsg = "Hello {0}, Hit Enter to begin the game";
         public const string BeginMsg = "Round {0} Begins";
         public const string UserInputMsg = "Which hand do you choose(Rock, Paper, Scissor)? ";
         public const string UserChoice = "You picked: {0}";
         public const string ComputerChoise = "Computer picked: {0}";
-        public const string UserWinsRound = "You won the round! You gained a point.";
-        public const string ComputerWinsRound = "Computer won the round! Computer gained a point.";
+        public const string UserWinsRound = "You won the round!";
+        public const string ComputerWinsRound = "Computer won the round!";
         public const string TieRound = "Round tied. You and the computer gained a point.";
         public const string Result = "Results - Player {0}, Computer {1}";
         public const string UserWinsTheGame = "Congratulations {0}, you won the game";
