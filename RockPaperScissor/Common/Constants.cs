@@ -11,7 +11,7 @@
         public const string ComputerChoise = "Computer picked: {0}";
         public const string UserWinsRound = "You won the round!";
         public const string ComputerWinsRound = "Computer won the round!";
-        public const string TieRound = "Round tied. You and the computer gained a point.";
+        public const string TieRound = "It is a Tie!";
         public const string Result = "Results - Player {0}, Computer {1}";
         public const string UserWinsTheGame = "Congratulations {0}, you won the game";
         public const string ComputerWinsTheGame = "Sorry {0}, Computer won the game. better luck next time.";
