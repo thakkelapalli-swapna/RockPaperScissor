@@ -8,8 +8,7 @@ namespace RockPaperScissor.Interfaces
 {
     public interface IAction
     {
-        public int GetDesiredRounds();
-        public Input GetPlayerAction();
+        public Input GetPlayerAction(string input);
         public Input GetComputerAction();
     }
 }

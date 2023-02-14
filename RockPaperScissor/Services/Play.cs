@@ -18,25 +18,33 @@ namespace RockPaperScissor.Services
 
         public void PlayGame()
         {
-            
+
             Console.WriteLine(Constants.WelcomeMessage);
             Console.WriteLine(Constants.EnterName);
             string name = Console.ReadLine();
             Console.WriteLine(Constants.GreetingMsg, name);
             Console.ReadLine();
-            
+
             PlayRounds();
-            
+
         }
         private void PlayRounds()
         {
             string repeat = string.Empty;
             do
             {
-                
-                Console.WriteLine(Constants.UserInputMsg);
 
-                var playerAction = _action.GetPlayerAction();
+                Console.WriteLine(Constants.UserInputMsg);
+                Input playerAction;
+
+				while (true)
+				{
+                    var input = Console.ReadLine();
+                    playerAction = _action.GetPlayerAction(input);
+                    if (playerAction != Input.Invalid)
+                        break;
+                }
+
                 Console.WriteLine(Constants.UserChoice, playerAction.ToString());
 
                 var computerAction = _action.GetComputerAction();
