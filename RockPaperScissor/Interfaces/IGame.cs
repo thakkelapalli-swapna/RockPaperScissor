@@ -1,4 +1,4 @@
-﻿using static RockPaperScissor.Enums.Enums;
+﻿using static RockPaperScissor.Common.Enums;
 
 namespace RockPaperScissor.Interfaces
 {

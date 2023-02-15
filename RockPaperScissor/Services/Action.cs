@@ -1,7 +1,7 @@
 ﻿using RockPaperScissor.Common;
 using RockPaperScissor.Interfaces;
 using System;
-using static RockPaperScissor.Enums.Enums;
+using static RockPaperScissor.Common.Enums;
 
 namespace RockPaperScissor.Services
 {

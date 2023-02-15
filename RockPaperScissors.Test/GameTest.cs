@@ -1,5 +1,5 @@
 ﻿using Xunit;
-using static RockPaperScissor.Enums.Enums;
+using static RockPaperScissor.Common.Enums;
 using RockPaperScissor.Services;
 
 namespace RockPaperScissors.Test

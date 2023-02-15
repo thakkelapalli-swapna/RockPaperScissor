@@ -1,4 +1,4 @@
-﻿namespace RockPaperScissor.Enums
+﻿namespace RockPaperScissor.Common
 {
     public class Enums
     {
